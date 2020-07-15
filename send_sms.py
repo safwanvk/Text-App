@@ -1,20 +1,15 @@
-
-
-
-
-
 from twilio.rest import Client
 
 # Your Account SID from twilio.com/console
-account_sid = "AC16ccd28fbb5cc9a92e4140355485c8fb"
+account_sid = "Your Account Sid"
 # Your Auth Token from twilio.com/console
-auth_token  = "a0e430627bfcc8eb61a54aeb1c0e5b90"
+auth_token  = "your_auth_token"
 
 client = Client(account_sid, auth_token)
 
 message = client.messages.create(
-    to="+919497575968",
-    from_="+12408396516",
+    to="+Your Cell Number",
+    from_="+Your Twilio Number",
     body="Hello!")
 
 print(message.sid)
